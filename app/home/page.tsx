@@ -90,9 +90,8 @@ export default function HomePage() {
       {/* Radius card with live map */}
       <div className="rounded-xl overflow-hidden bg-white border border-gray-200 mb-5 transition-shadow duration-300 hover:shadow-md">
         <div
-          className={`flex items-center justify-between px-4 py-3 transition-colors duration-500 ${
-            insideRadius === false ? "bg-red-500" : "bg-[#3F8C75]"
-          }`}
+          className={`flex items-center justify-between px-4 py-3 transition-colors duration-500 ${insideRadius === false ? "bg-red-500" : "bg-[#3F8C75]"
+            }`}
         >
           <p className="text-white font-semibold text-sm">
             {insideRadius === false ? "Anda diluar radius" : "Anda didalam radius"}
@@ -119,10 +118,10 @@ export default function HomePage() {
 
           <p className="text-gray-700 text-sm mb-1">Anda absen pada</p>
           <div className="flex gap-10 mb-4 transition-all duration-300">
-            <p key={attendance?.clockIn} className="text-gray-800 font-semibold animate-popIn">
+            <p key={`in-${attendance?.clockIn}`} className="text-gray-800 font-semibold animate-popIn">
               {attendance?.clockIn ?? "-"}
             </p>
-            <p key={attendance?.clockOut} className="text-gray-800 font-semibold animate-popIn">
+            <p key={`out-${attendance?.clockOut}`} className="text-gray-800 font-semibold animate-popIn">
               {attendance?.clockOut ?? "-"}
             </p>
           </div>
@@ -132,8 +131,8 @@ export default function HomePage() {
               onClick={() => setModalMode("in")}
               className="flex-1 flex items-center justify-center gap-2 rounded-lg bg-[#cfeede] text-gray-800 text-sm font-semibold py-2.5 transition-transform duration-150 active:scale-95"
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 16l-4-4 4-4M5 12h11M14 4h4a1 1 0 011 1v14a1 1 0 01-1 1h-4" />
+              <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6C8 3.79086 9.79086 2 12 2H17.5C19.9853 2 22 4.01472 22 6.5V17.5C22 19.9853 19.9853 22 17.5 22H12C9.79086 22 8 20.2091 8 18V17C8 16.4477 8.44772 16 9 16C9.55228 16 10 16.4477 10 17V18C10 19.1046 10.8954 20 12 20H17.5C18.8807 20 20 18.8807 20 17.5V6.5C20 5.11929 18.8807 4 17.5 4H12C10.8954 4 10 4.89543 10 6V7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7V6ZM12.2929 8.29289C12.6834 7.90237 13.3166 7.90237 13.7071 8.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L13.7071 15.7071C13.3166 16.0976 12.6834 16.0976 12.2929 15.7071C11.9024 15.3166 11.9024 14.6834 12.2929 14.2929L13.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L13.5858 11L12.2929 9.70711C11.9024 9.31658 11.9024 8.68342 12.2929 8.29289Z" fill="#0F1729" />
               </svg>
               Clock in
             </button>
@@ -141,8 +140,8 @@ export default function HomePage() {
               onClick={() => setModalMode("out")}
               className="flex-1 flex items-center justify-center gap-2 rounded-lg bg-[#f8d6d6] text-gray-800 text-sm font-semibold py-2.5 transition-transform duration-150 active:scale-95"
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 8l4 4-4 4M19 12H8M10 4H6a1 1 0 00-1 1v14a1 1 0 001 1h4" />
+              <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6.5C2 4.01472 4.01472 2 6.5 2H12C14.2091 2 16 3.79086 16 6V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V6C14 4.89543 13.1046 4 12 4H6.5C5.11929 4 4 5.11929 4 6.5V17.5C4 18.8807 5.11929 20 6.5 20H12C13.1046 20 14 19.1046 14 18V17C14 16.4477 14.4477 16 15 16C15.5523 16 16 16.4477 16 17V18C16 20.2091 14.2091 22 12 22H6.5C4.01472 22 2 19.9853 2 17.5V6.5ZM18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071C17.9024 15.3166 17.9024 14.6834 18.2929 14.2929L19.5858 13L11 13C10.4477 13 10 12.5523 10 12C10 11.4477 10.4477 11 11 11L19.5858 11L18.2929 9.70711C17.9024 9.31658 17.9024 8.68342 18.2929 8.29289Z" fill="#0F1729" />
               </svg>
               Clock out
             </button>
