@@ -24,16 +24,34 @@
       "email": "moris@mail.com",
       "password": "mor!",
       "birthDate": "2004-01-08",
-      "role": "SDM",
+      "role": "Programmer",
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=moris",
       "schedule": {
         "start": "07:20",
         "end": "14:00"
       },
       "attendance": {
-        "date": "",
-        "clockIn": "-",
-        "clockOut": "-"
+        "date": "2026-06-14",
+        "clockIn": "18.08",
+        "clockOut": "19.46"
+      }
+    },
+    {
+      "id": "1781442384887",
+      "name": "Annisa Mutiah",
+      "email": "annisamutiah@gmail.com",
+      "password": "!akuimut",
+      "birthDate": "2000-07-24",
+      "role": "Guru",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Annisa%20Mutiah",
+      "schedule": {
+        "start": "07:20",
+        "end": "14:00"
+      },
+      "attendance": {
+        "date": "2026-06-14",
+        "clockIn": "20.07",
+        "clockOut": "20.07"
       }
     }
   ]
