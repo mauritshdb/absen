@@ -92,7 +92,7 @@ export default function LoginPage() {
         </p>
 
         <p className="text-center text-[10px] text-white/70 mt-3">
-          Demo: johnsmith@mail.com / Password123!
+          Demo: janedoe@mail.com / !Password123
         </p>
       </div>
 
