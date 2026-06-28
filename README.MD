@@ -23,7 +23,7 @@ Aplikasi manajemen kehadiran berbasis web yang dibangun menggunakan **Next.js** 
 | [Tailwind CSS](https://tailwindcss.com/) | 3+ |
 
 ---
-
+## 🎬 Video
 [![Watch the video](https://img.youtube.com/vi/2ABsHKZUBtk/maxresdefault.jpg)](https://youtu.be/2ABsHKZUBtk)
 
 ---
