@@ -24,6 +24,10 @@ Aplikasi manajemen kehadiran berbasis web yang dibangun menggunakan **Next.js** 
 
 ---
 
+[![Watch the video](https://img.youtube.com/vi/2ABsHKZUBtk/maxresdefault.jpg)](https://youtu.be/2ABsHKZUBtk)
+
+---
+
 ## ⚙️ Prasyarat
 
 Pastikan perangkat Anda telah terinstal:
